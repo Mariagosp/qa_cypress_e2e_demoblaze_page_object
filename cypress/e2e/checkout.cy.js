@@ -3,6 +3,7 @@ import HomeAndCataloguePageObject
   from '../support/pages/homeCatalogue.pageObject';
 
 const homePage = new HomeAndCataloguePageObject();
+const alertMessage = 'Product added';
 
 describe('', () => {
   before(() => {
@@ -15,7 +16,7 @@ describe('', () => {
 
     homePage.clickOnAddToCart();
 
-    homePage.assertAllert('Product added');
+    homePage.assertAllert(alertMessage);
 
     homePage.clickOnLink('Cart');
 
